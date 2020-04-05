@@ -33,7 +33,8 @@ class TaskBar {
 
         statusItem.button!.image = resizedLogo
     }
-
+    
+    // MARK: Main Menu
     func createMainMenu() {
         let menu = NSMenu()
 
@@ -69,7 +70,8 @@ class TaskBar {
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         statusItem.menu = menu
     }
-
+    
+    // MARK: Documentation Menu
     func createDocumentationMenu() -> NSMenu {
         let menu = NSMenu()
 
@@ -127,7 +129,7 @@ class TaskBar {
     @objc func setToolchainNightly() { setToolchainChannel(.nightly) }
 
     @objc func setToolchainChannel(_ channel: ToolchainChannel) {
-        try! Process.run(rustupUrl(), arguments: ["default", "\(channel.description.lowercased())"], terminationHandler: nil)
+        Rustup.set(channel: channel)
         resetChannelState()
         statusItem.menu?.item(withTag: channel.menuTag)?.state = .on
     }

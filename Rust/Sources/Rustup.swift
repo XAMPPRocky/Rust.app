@@ -50,6 +50,10 @@ class Rustup {
         return version(nil)
     }
     
+    static func set(channel: ToolchainChannel) {
+        try! Rustup.run(args: ["default", "\(channel.slug)"])
+    }
+
     /// Return the current version of a specific toolchain, or using the currently set toolchain if `nil`.
     static func version(_ channel: ToolchainChannel?) -> String {
         let args = (channel != nil) ? ["+\(channel!.slug)", "-V"] : ["-V"]
