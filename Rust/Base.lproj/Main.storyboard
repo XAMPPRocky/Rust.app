@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="yhU-lZ-f5n">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -202,7 +202,7 @@
         <!--Window Controller-->
         <scene sceneID="OAv-ZW-xUK">
             <objects>
-                <windowController id="yhU-lZ-f5n" customClass="LaunchWindow" customModule="Rust" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="preferencesWindow" id="yhU-lZ-f5n" customClass="LaunchWindow" customModule="Rust" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="EKZ-qQ-8fW">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
                         <rect key="contentRect" x="245" y="310" width="800" height="450"/>
@@ -239,7 +239,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="yEe-gv-dul">
-                                                    <rect key="frame" x="0.0" y="227" width="606" height="234"/>
+                                                    <rect key="frame" x="0.0" y="223" width="606" height="234"/>
                                                     <subviews>
                                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pk9-e0-zrq">
                                                             <rect key="frame" x="239" y="98" width="128" height="128"/>
@@ -286,13 +286,13 @@
                                                     </constraints>
                                                 </customView>
                                                 <stackView distribution="equalSpacing" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKx-GO-fIs">
-                                                    <rect key="frame" x="151" y="8" width="399" height="211"/>
+                                                    <rect key="frame" x="151" y="8" width="455" height="207"/>
                                                     <subviews>
                                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="GRa-cN-RfR">
-                                                            <rect key="frame" x="0.0" y="147" width="399" height="64"/>
+                                                            <rect key="frame" x="0.0" y="143" width="455" height="64"/>
                                                             <subviews>
                                                                 <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAa-84-wIj">
-                                                                    <rect key="frame" x="60" y="8" width="327" height="48"/>
+                                                                    <rect key="frame" x="60" y="8" width="383" height="48"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="8jl-Q2-QOS">
                                                                             <rect key="frame" x="-2" y="24" width="162" height="24"/>
@@ -345,10 +345,10 @@
                                                             </constraints>
                                                         </customView>
                                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="hxC-yO-f5z">
-                                                            <rect key="frame" x="0.0" y="75" width="399" height="64"/>
+                                                            <rect key="frame" x="0.0" y="71" width="455" height="64"/>
                                                             <subviews>
                                                                 <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XXp-Vo-1jA">
-                                                                    <rect key="frame" x="60" y="8" width="327" height="48"/>
+                                                                    <rect key="frame" x="60" y="8" width="383" height="48"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="S1n-qx-cLB">
                                                                             <rect key="frame" x="-2" y="24" width="196" height="24"/>
@@ -401,13 +401,13 @@
                                                             </constraints>
                                                         </customView>
                                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="rco-c1-txu">
-                                                            <rect key="frame" x="0.0" y="0.0" width="399" height="67"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="455" height="63"/>
                                                             <subviews>
                                                                 <stackView distribution="equalSpacing" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIW-s9-nD2">
-                                                                    <rect key="frame" x="60" y="8" width="327" height="51"/>
+                                                                    <rect key="frame" x="60" y="8" width="383" height="47"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-NG-NJI">
-                                                                            <rect key="frame" x="-2" y="32" width="331" height="19"/>
+                                                                            <rect key="frame" x="-2" y="28" width="387" height="19"/>
                                                                             <textFieldCell key="cell" selectable="YES" title="Clone an existing project" id="Xf0-d8-mIk">
                                                                                 <font key="font" metaFont="systemMedium" size="16"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -415,7 +415,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="lvP-Kg-UOE">
-                                                                            <rect key="frame" x="-2" y="0.0" width="331" height="32"/>
+                                                                            <rect key="frame" x="-2" y="4" width="387" height="16"/>
                                                                             <textFieldCell key="cell" selectable="YES" title="Get started on your project using an existing git repository." id="i2k-aV-FHV">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -425,10 +425,11 @@
                                                                     </subviews>
                                                                     <constraints>
                                                                         <constraint firstItem="fMe-NG-NJI" firstAttribute="leading" secondItem="YIW-s9-nD2" secondAttribute="leading" id="9oF-4Q-5yh"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="lvP-Kg-UOE" secondAttribute="bottom" id="NA1-9Y-yW2"/>
                                                                         <constraint firstAttribute="trailing" secondItem="lvP-Kg-UOE" secondAttribute="trailing" id="VwW-8M-0t7"/>
                                                                         <constraint firstItem="lvP-Kg-UOE" firstAttribute="leading" secondItem="YIW-s9-nD2" secondAttribute="leading" id="VzK-Va-XWe"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="lvP-Kg-UOE" secondAttribute="bottom" constant="4" id="ZgF-rE-mX2"/>
                                                                         <constraint firstItem="fMe-NG-NJI" firstAttribute="top" secondItem="YIW-s9-nD2" secondAttribute="top" id="dVq-Ew-Fkn"/>
+                                                                        <constraint firstItem="lvP-Kg-UOE" firstAttribute="top" secondItem="fMe-NG-NJI" secondAttribute="bottom" constant="8" id="mxP-3O-XS6"/>
                                                                         <constraint firstAttribute="trailing" secondItem="fMe-NG-NJI" secondAttribute="trailing" id="za1-yi-FUH"/>
                                                                     </constraints>
                                                                     <visibilityPriorities>
@@ -441,7 +442,7 @@
                                                                     </customSpacing>
                                                                 </stackView>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TIj-SB-MIj">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="64" id="aB0-hf-lXu"/>
                                                                         <constraint firstAttribute="width" secondItem="TIj-SB-MIj" secondAttribute="height" multiplier="1:1" id="bOU-5s-Jla"/>
@@ -478,10 +479,9 @@
                                                 <constraint firstItem="S1n-qx-cLB" firstAttribute="leading" secondItem="Ltq-5a-U9T" secondAttribute="leading" id="230-ZV-Xnz"/>
                                                 <constraint firstItem="yEe-gv-dul" firstAttribute="top" secondItem="Gmf-cS-pP3" secondAttribute="top" id="3Fp-eR-Aan"/>
                                                 <constraint firstItem="yEe-gv-dul" firstAttribute="leading" secondItem="Gmf-cS-pP3" secondAttribute="leading" id="3bp-Wc-nTu"/>
-                                                <constraint firstItem="rKx-GO-fIs" firstAttribute="width" secondItem="6Co-d5-wlf" secondAttribute="width" id="NIN-s4-FO5"/>
+                                                <constraint firstAttribute="trailing" secondItem="rKx-GO-fIs" secondAttribute="trailing" id="NUv-Ni-kIx"/>
                                                 <constraint firstItem="rKx-GO-fIs" firstAttribute="top" secondItem="yEe-gv-dul" secondAttribute="bottom" constant="8" id="Tft-Xp-8Mz"/>
                                                 <constraint firstAttribute="trailing" secondItem="yEe-gv-dul" secondAttribute="trailing" id="Zn6-Ez-nQO"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rKx-GO-fIs" secondAttribute="trailing" constant="8" id="d0J-Fd-rxh"/>
                                                 <constraint firstAttribute="bottom" secondItem="rKx-GO-fIs" secondAttribute="bottom" constant="8" id="lVO-Sr-AkJ"/>
                                             </constraints>
                                         </view>

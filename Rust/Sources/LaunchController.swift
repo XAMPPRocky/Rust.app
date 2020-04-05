@@ -15,7 +15,7 @@ class LaunchController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        subtitle.stringValue = "Latest Stable Version (\(Rustup.version()))"
+        subtitle.stringValue = "Latest Stable Version (\(Rustup.version(.stable)))"
     }
     
 }

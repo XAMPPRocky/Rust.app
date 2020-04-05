@@ -30,7 +30,7 @@ import AppKit
     var description: String {
         switch self {
         case .stable:
-            return "Stable \(Rustup.version(.stable))"
+            return "Stable (\(Rustup.version(.stable)))"
         case .beta:
             return "Beta"
         case .nightly:
