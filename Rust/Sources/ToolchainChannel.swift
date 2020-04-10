@@ -30,11 +30,22 @@ import AppKit
     var description: String {
         switch self {
         case .stable:
-            return "Stable (\(Rustup.version(.stable)))"
+            return "Stable (\(Rustc.version(.stable)))"
         case .beta:
             return "Beta"
         case .nightly:
             return "Nightly"
+        }
+    }
+    
+    var shortcutKey: String {
+        switch self {
+        case .stable:
+            return "s"
+        case .beta:
+            return "b"
+        case .nightly:
+            return "n"
         }
     }
     
@@ -47,25 +58,5 @@ import AppKit
         case .nightly:
             return 30
         }
-    }
-}
-
-class ToolchainMenuItem: NSMenuItem {
-    var channel: ToolchainChannel
-    
-    init(channel: ToolchainChannel, action selector: Selector?, key charCode: String, target: AnyObject?) {
-        self.channel = channel
-        super.init(title: self.channel.description, action: selector, keyEquivalent: charCode)
-        self.tag = self.channel.menuTag
-        self.target = target
-    }
-    
-    convenience init(channel: ToolchainChannel, action selector: Selector?, target: AnyObject?) {
-        self.init(channel: channel, action: selector, key: "", target: target)
-    }
-    
-    required init(coder: NSCoder) {
-        self.channel = ToolchainChannel(rawValue: Int(coder.decodeInt32(forKey: "channel")))!
-        super.init(coder: coder)
     }
 }

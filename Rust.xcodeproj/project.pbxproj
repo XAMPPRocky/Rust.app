@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E53069DE241540F600809ADD /* LaunchWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53069DD241540F600809ADD /* LaunchWindow.swift */; };
+		E55CD257243A5FB100FC5252 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E55CD256243A5FB100FC5252 /* Alamofire */; };
+		E55CD25B243A769700FC5252 /* NewProjects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E55CD25A243A769700FC5252 /* NewProjects.storyboard */; };
+		E56C9E3E243C038500B19471 /* SpotlightDocumentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C9E3D243C038500B19471 /* SpotlightDocumentation.swift */; };
 		E5730ED024393B0800B1A10D /* TaskBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5730ECF24393B0800B1A10D /* TaskBar.swift */; };
 		E57889142416935E00633D12 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57889132416935E00633D12 /* LaunchController.swift */; };
 		E5788916241693CF00633D12 /* Rustup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5788915241693CF00633D12 /* Rustup.swift */; };
@@ -20,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		E53069DD241540F600809ADD /* LaunchWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchWindow.swift; sourceTree = "<group>"; };
+		E55CD25A243A769700FC5252 /* NewProjects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewProjects.storyboard; sourceTree = "<group>"; };
+		E56C9E3D243C038500B19471 /* SpotlightDocumentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightDocumentation.swift; sourceTree = "<group>"; };
 		E5730ECF24393B0800B1A10D /* TaskBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBar.swift; sourceTree = "<group>"; };
 		E57889132416935E00633D12 /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
 		E5788915241693CF00633D12 /* Rustup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rustup.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E58A1A31240D3C8100367963 /* Toml in Frameworks */,
+				E55CD257243A5FB100FC5252 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +59,7 @@
 				E5788915241693CF00633D12 /* Rustup.swift */,
 				E5730ECF24393B0800B1A10D /* TaskBar.swift */,
 				E58A1A34240D592000367963 /* ToolchainChannel.swift */,
+				E56C9E3D243C038500B19471 /* SpotlightDocumentation.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -81,6 +88,7 @@
 				E5A6735F240C7590002B8301 /* Main.storyboard */,
 				E5A67362240C7590002B8301 /* Info.plist */,
 				E5A67363240C7590002B8301 /* Rust.entitlements */,
+				E55CD25A243A769700FC5252 /* NewProjects.storyboard */,
 			);
 			path = Rust;
 			sourceTree = "<group>";
@@ -103,6 +111,7 @@
 			name = Rust;
 			packageProductDependencies = (
 				E58A1A30240D3C8100367963 /* Toml */,
+				E55CD256243A5FB100FC5252 /* Alamofire */,
 			);
 			productName = Rust;
 			productReference = E5A67356240C758D002B8301 /* Rust.app */;
@@ -115,7 +124,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Rust;
 				TargetAttributes = {
 					E5A67355240C758D002B8301 = {
@@ -134,6 +143,7 @@
 			mainGroup = E5A6734D240C758D002B8301;
 			packageReferences = (
 				E58A1A2F240D3C8100367963 /* XCRemoteSwiftPackageReference "swift-toml" */,
+				E55CD255243A5FB100FC5252 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = E5A67357240C758D002B8301 /* Products */;
 			projectDirPath = "";
@@ -150,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A6735E240C7590002B8301 /* Assets.xcassets in Resources */,
+				E55CD25B243A769700FC5252 /* NewProjects.storyboard in Resources */,
 				E5A67361240C7590002B8301 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56C9E3E243C038500B19471 /* SpotlightDocumentation.swift in Sources */,
 				E5730ED024393B0800B1A10D /* TaskBar.swift in Sources */,
 				E57889142416935E00633D12 /* LaunchController.swift in Sources */,
 				E5A6735A240C758D002B8301 /* AppDelegate.swift in Sources */,
@@ -302,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rust/Rust.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U6Z6284VJP;
@@ -322,6 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rust/Rust.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U6Z6284VJP;
@@ -361,6 +375,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E55CD255243A5FB100FC5252 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 		E58A1A2F240D3C8100367963 /* XCRemoteSwiftPackageReference "swift-toml" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:jdfergason/swift-toml.git";
@@ -372,6 +394,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E55CD256243A5FB100FC5252 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E55CD255243A5FB100FC5252 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		E58A1A30240D3C8100367963 /* Toml */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E58A1A2F240D3C8100367963 /* XCRemoteSwiftPackageReference "swift-toml" */;

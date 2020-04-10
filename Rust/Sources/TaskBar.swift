@@ -8,6 +8,7 @@
 
 import Cocoa
 import Toml
+import Alamofire
 
 func createMenuItem(title: String, action: Selector?, key charCode: String, target: AnyObject?) -> NSMenuItem {
     let menu = NSMenuItem(title: title, action: action, keyEquivalent: charCode)
@@ -17,12 +18,14 @@ func createMenuItem(title: String, action: Selector?, key charCode: String, targ
 
 class TaskBar {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-
+    let manager = NetworkReachabilityManager(host: "doc.rust-lang.org")
+    
     init() {
         createLogo()
         createMainMenu()
     }
 
+    // MARK: Logo
     func createLogo() {
         let logo = NSImage(named: NSImage.Name("status-logo"))!
 
@@ -33,15 +36,40 @@ class TaskBar {
 
         statusItem.button!.image = resizedLogo
     }
+
+    // MARK: Channels
+    class ChannelMenuItem: NSMenuItem {
+        var channel: ToolchainChannel? = nil
+        
+        convenience init(channel: ToolchainChannel, action: Selector, target: AnyObject?) {
+            self.init(title: channel.description, action: action, keyEquivalent: channel.shortcutKey)
+            self.target = target
+        }
+    }
+    
+    @objc func setToolchainStable() { setToolchainChannel(.stable) }
+    @objc func setToolchainBeta() { setToolchainChannel(.beta) }
+    @objc func setToolchainNightly() { setToolchainChannel(.nightly) }
+
+    @objc func setToolchainChannel(_ channel: ToolchainChannel) {
+        Rustup.set(channel: channel)
+        resetChannelState()
+        statusItem.menu?.item(withTag: channel.menuTag)?.state = .on
+    }
+
+    func resetChannelState() {
+        for channel in ToolchainChannel.all {
+            statusItem.menu?.item(withTag: channel.menuTag)?.state = .off
+        }
+    }
     
     // MARK: Main Menu
     func createMainMenu() {
         let menu = NSMenu()
 
-        let stable = ToolchainMenuItem(channel: .stable, action: #selector(setToolchainStable), key: "s", target: self)
-
-        let beta = ToolchainMenuItem(channel: .beta, action: #selector(setToolchainBeta), key: "b", target: self)
-        let nightly = ToolchainMenuItem(channel: .nightly, action: #selector(setToolchainNightly), key: "n", target: self)
+        let stable = ChannelMenuItem(channel: .stable, action: #selector(setToolchainStable), target: self)
+        let beta = ChannelMenuItem(channel: .beta, action: #selector(setToolchainBeta), target: self)
+        let nightly = ChannelMenuItem(channel: .nightly, action: #selector(setToolchainNightly), target: self)
 
         switch Rustup.channel() {
         case .stable:
@@ -51,27 +79,27 @@ class TaskBar {
         case .nightly:
             nightly.state = .on
         }
-
-        let documentation = createMenuItem(title: "Documentation", action: nil, key: "", target: self)
-        documentation.submenu = createDocumentationMenu()
-
-        menu.addItem(createMenuItem(title: "Preferences", action: #selector(showPreferences), key: "p", target: self))
+        
+        menu.addItem(NSMenuItem(title: "New Project...", action: nil, keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Open Project...", action: nil, keyEquivalent: ""))
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(documentation)
+        menu.addItem(createDocumentationMenu())
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Channel", action: nil, keyEquivalent: ""))
         menu.addItem(stable)
         menu.addItem(beta)
         menu.addItem(nightly)
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Targets", action: nil, keyEquivalent: ""))
+        menu.addItem(createMenuItem(title: "Preferences...", action: #selector(showPreferences), key: "p", target: self))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+
         statusItem.menu = menu
     }
-    
+
     // MARK: Documentation Menu
-    func createDocumentationMenu() -> NSMenu {
+    func createDocumentationMenu() -> NSMenuItem {
+        let documentation = createMenuItem(title: "Documentation", action: nil, key: "", target: self)
         let menu = NSMenu()
 
         menu.addItem(NSMenuItem(title: "API Docs", action: nil, keyEquivalent: ""))
@@ -96,7 +124,9 @@ class TaskBar {
         menu.addItem(createMenuItem(title: "Nightly Features", action: #selector(openUnstableBook), key: "", target: self))
         menu.addItem(NSMenuItem.separator())
 
-        return menu
+        documentation.submenu = menu
+        
+        return documentation
     }
 
     @objc func openAlloc() { openDoc("alloc", "https://doc.rust-lang.org/alloc") }
@@ -116,26 +146,14 @@ class TaskBar {
     @objc func openUnstableBook() { openDoc("unstable-book", "https://doc.rust-lang.org/unstable-book") }
 
     @objc func openDoc(_ resource: String, _ url: String) {
-        try! Rustup.run(args: ["doc", "--\(resource)"])
-    }
-
-    // MARK: Channel Setters
-    @objc func setToolchainStable() { setToolchainChannel(.stable) }
-    @objc func setToolchainBeta() { setToolchainChannel(.beta) }
-    @objc func setToolchainNightly() { setToolchainChannel(.nightly) }
-
-    @objc func setToolchainChannel(_ channel: ToolchainChannel) {
-        Rustup.set(channel: channel)
-        resetChannelState()
-        statusItem.menu?.item(withTag: channel.menuTag)?.state = .on
-    }
-
-    func resetChannelState() {
-        for channel in ToolchainChannel.all {
-            statusItem.menu?.item(withTag: channel.menuTag)?.state = .off
+        if case .reachable(_)? = manager?.status {
+            NSWorkspace.shared.open(URL(string: url)!)
+        } else {
+            try! Rustup.run(args: ["doc", "--\(resource)"])
         }
     }
 
+    // MARK: Show Preferences
     @objc func showPreferences() {
         if let window = AppDelegate.preferencesWindow {
             window.showWindow(self)

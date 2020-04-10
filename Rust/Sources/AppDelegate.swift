@@ -16,6 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         self.menu = TaskBar()
+        SpotlightDocumentation.generateDocumentationSpotlight()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
