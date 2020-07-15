@@ -71,6 +71,7 @@ class TaskBar {
         let beta = ChannelMenuItem(channel: .beta, action: #selector(setToolchainBeta), target: self)
         let nightly = ChannelMenuItem(channel: .nightly, action: #selector(setToolchainNightly), target: self)
 
+        /*
         switch Rustup.channel() {
         case .stable:
             stable.state = .on
@@ -79,10 +80,11 @@ class TaskBar {
         case .nightly:
             nightly.state = .on
         }
+        */
         
-        menu.addItem(NSMenuItem(title: "New Project...", action: nil, keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: "Open Project...", action: nil, keyEquivalent: ""))
-        menu.addItem(NSMenuItem.separator())
+        // menu.addItem(NSMenuItem(title: "New Project...", action: nil, keyEquivalent: ""))
+        // menu.addItem(NSMenuItem(title: "Open Project...", action: nil, keyEquivalent: ""))
+        // menu.addItem(NSMenuItem.separator())
         menu.addItem(createDocumentationMenu())
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Channel", action: nil, keyEquivalent: ""))
@@ -149,7 +151,7 @@ class TaskBar {
         if case .reachable(_)? = manager?.status {
             NSWorkspace.shared.open(URL(string: url)!)
         } else {
-            try! Rustup.run(args: ["doc", "--\(resource)"])
+            Rustup.output(["doc", "--\(resource)"]) { _ in }
         }
     }
 

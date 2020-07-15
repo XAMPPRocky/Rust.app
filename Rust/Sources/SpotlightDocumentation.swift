@@ -15,7 +15,7 @@ class SpotlightDocumentation {
 
         do {
             let resourceKeys : [URLResourceKey] = [.isDirectoryKey]
-            let documentsURL = try! Rustup.documentationDirectory()
+            let documentsURL = Rustup.documentationDirectory()
             let enumerator = FileManager.default.enumerator(at: documentsURL,
                                     includingPropertiesForKeys: resourceKeys,
                                     options: [.skipsHiddenFiles], errorHandler: { (url, error) -> Bool in
@@ -23,6 +23,7 @@ class SpotlightDocumentation {
                                                                 return true
             })!
             
+            var items: [CSSearchableItem] = []
             for case let fileURL as URL in enumerator {
                 let resourceValues = try fileURL.resourceValues(forKeys: Set(resourceKeys))
                 if resourceValues.isDirectory! {
@@ -30,26 +31,27 @@ class SpotlightDocumentation {
                 }
                 
                 let path = fileURL.absoluteString.dropFirst(documentsURL.absoluteString.count)
-
-                createDocumentationItem(title: String(path))
+                print(String(path))
+                items.append(createDocumentationItem(title: String(path)))
+            }
+            
+            CSSearchableIndex.default().indexSearchableItems(items) { error in
+                if let error = error {
+                    print("Indexing error: \(error.localizedDescription)")
+                } else {
+                    print("Search item successfully indexed!")
+                }
             }
         } catch {
             print(error)
         }
     }
     
-    static func createDocumentationItem(title: String) {
+    static func createDocumentationItem(title: String) -> CSSearchableItem {
         let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeHTML as String)
         attributeSet.title = title
-        //attributeSet.contentDescription = desc
+        attributeSet.contentDescription = title
 
-        let item = CSSearchableItem(uniqueIdentifier: "\(title)", domainIdentifier: "com.xampprocky", attributeSet: attributeSet)
-        CSSearchableIndex.default().indexSearchableItems([item]) { error in
-            if let error = error {
-                print("Indexing error: \(error.localizedDescription)")
-            } else {
-                print("Search item successfully indexed!")
-            }
-        }
+        return CSSearchableItem(uniqueIdentifier: "\(title)", domainIdentifier: "com.xampprocky", attributeSet: attributeSet)
     }
 }

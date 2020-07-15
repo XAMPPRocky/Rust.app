@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,12 +14,42 @@
 		E5730ED024393B0800B1A10D /* TaskBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5730ECF24393B0800B1A10D /* TaskBar.swift */; };
 		E57889142416935E00633D12 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57889132416935E00633D12 /* LaunchController.swift */; };
 		E5788916241693CF00633D12 /* Rustup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5788915241693CF00633D12 /* Rustup.swift */; };
+		E57C1EAA24BDE2430074CE11 /* rustup in Resources */ = {isa = PBXBuildFile; fileRef = E57C1EA924BDE0D00074CE11 /* rustup */; };
+		E57C1EC124BDEC620074CE11 /* AppMover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57C1EC024BDEC540074CE11 /* AppMover.framework */; };
+		E57C1EC224BDEC620074CE11 /* AppMover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E57C1EC024BDEC540074CE11 /* AppMover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E57C1EC924BEE8A90074CE11 /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57C1EC824BEE8A90074CE11 /* Process.swift */; };
+		E57C1ECB24BF56CD0074CE11 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57C1ECA24BF56CD0074CE11 /* Preferences.storyboard */; };
+		E57C1ECD24BF58FD0074CE11 /* Installation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57C1ECC24BF58FD0074CE11 /* Installation.storyboard */; };
 		E58A1A31240D3C8100367963 /* Toml in Frameworks */ = {isa = PBXBuildFile; productRef = E58A1A30240D3C8100367963 /* Toml */; };
 		E58A1A35240D592000367963 /* ToolchainChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58A1A34240D592000367963 /* ToolchainChannel.swift */; };
 		E5A6735A240C758D002B8301 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A67359240C758D002B8301 /* AppDelegate.swift */; };
 		E5A6735E240C7590002B8301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A6735D240C7590002B8301 /* Assets.xcassets */; };
 		E5A67361240C7590002B8301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A6735F240C7590002B8301 /* Main.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E57C1EBF24BDEC540074CE11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E57C1EB624BDEC540074CE11 /* AppMover.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 75647A1D23AD659600C8E88E;
+			remoteInfo = AppMover;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E57C1EB324BDE8D00074CE11 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E57C1EC224BDEC620074CE11 /* AppMover.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E53069DD241540F600809ADD /* LaunchWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchWindow.swift; sourceTree = "<group>"; };
@@ -28,6 +58,16 @@
 		E5730ECF24393B0800B1A10D /* TaskBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBar.swift; sourceTree = "<group>"; };
 		E57889132416935E00633D12 /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
 		E5788915241693CF00633D12 /* Rustup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rustup.swift; sourceTree = "<group>"; };
+		E57C1EA924BDE0D00074CE11 /* rustup */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = rustup; path = Rust/rustup; sourceTree = "<group>"; };
+		E57C1EB524BDEC540074CE11 /* AppMover.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = AppMover.xcworkspace; sourceTree = "<group>"; };
+		E57C1EB624BDEC540074CE11 /* AppMover.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AppMover.xcodeproj; sourceTree = "<group>"; };
+		E57C1EBA24BDEC540074CE11 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E57C1EBB24BDEC540074CE11 /* AppMover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMover.h; sourceTree = "<group>"; };
+		E57C1EBC24BDEC540074CE11 /* AppMover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMover.swift; sourceTree = "<group>"; };
+		E57C1EBD24BDEC540074CE11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E57C1EC824BEE8A90074CE11 /* Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Process.swift; sourceTree = "<group>"; };
+		E57C1ECA24BF56CD0074CE11 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		E57C1ECC24BF58FD0074CE11 /* Installation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Installation.storyboard; sourceTree = "<group>"; };
 		E58A1A34240D592000367963 /* ToolchainChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolchainChannel.swift; sourceTree = "<group>"; };
 		E5A67356240C758D002B8301 /* Rust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A67359240C758D002B8301 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E58A1A31240D3C8100367963 /* Toml in Frameworks */,
+				E57C1EC124BDEC620074CE11 /* AppMover.framework in Frameworks */,
 				E55CD257243A5FB100FC5252 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,8 +101,47 @@
 				E5730ECF24393B0800B1A10D /* TaskBar.swift */,
 				E58A1A34240D592000367963 /* ToolchainChannel.swift */,
 				E56C9E3D243C038500B19471 /* SpotlightDocumentation.swift */,
+				E57C1EC824BEE8A90074CE11 /* Process.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		E57C1EB424BDEC540074CE11 /* AppMover */ = {
+			isa = PBXGroup;
+			children = (
+				E57C1EB524BDEC540074CE11 /* AppMover.xcworkspace */,
+				E57C1EB624BDEC540074CE11 /* AppMover.xcodeproj */,
+				E57C1EB924BDEC540074CE11 /* AppMover */,
+			);
+			path = AppMover;
+			sourceTree = "<group>";
+		};
+		E57C1EB724BDEC540074CE11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E57C1EC024BDEC540074CE11 /* AppMover.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E57C1EB924BDEC540074CE11 /* AppMover */ = {
+			isa = PBXGroup;
+			children = (
+				E57C1EBA24BDEC540074CE11 /* Extensions.swift */,
+				E57C1EBB24BDEC540074CE11 /* AppMover.h */,
+				E57C1EBC24BDEC540074CE11 /* AppMover.swift */,
+				E57C1EBD24BDEC540074CE11 /* Info.plist */,
+			);
+			path = AppMover;
+			sourceTree = "<group>";
+		};
+		E58F8F0524BC8031003BCB2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E57C1EB424BDEC540074CE11 /* AppMover */,
+				E57C1EA924BDE0D00074CE11 /* rustup */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E5A6734D240C758D002B8301 = {
@@ -69,6 +149,7 @@
 			children = (
 				E5A67358240C758D002B8301 /* Rust */,
 				E5A67357240C758D002B8301 /* Products */,
+				E58F8F0524BC8031003BCB2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +170,8 @@
 				E5A67362240C7590002B8301 /* Info.plist */,
 				E5A67363240C7590002B8301 /* Rust.entitlements */,
 				E55CD25A243A769700FC5252 /* NewProjects.storyboard */,
+				E57C1ECA24BF56CD0074CE11 /* Preferences.storyboard */,
+				E57C1ECC24BF58FD0074CE11 /* Installation.storyboard */,
 			);
 			path = Rust;
 			sourceTree = "<group>";
@@ -103,6 +186,7 @@
 				E5A67352240C758D002B8301 /* Sources */,
 				E5A67353240C758D002B8301 /* Frameworks */,
 				E5A67354240C758D002B8301 /* Resources */,
+				E57C1EB324BDE8D00074CE11 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,8 +207,9 @@
 		E5A6734E240C758D002B8301 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Rust;
 				TargetAttributes = {
 					E5A67355240C758D002B8301 = {
@@ -147,6 +232,12 @@
 			);
 			productRefGroup = E5A67357240C758D002B8301 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E57C1EB724BDEC540074CE11 /* Products */;
+					ProjectRef = E57C1EB624BDEC540074CE11 /* AppMover.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E5A67355240C758D002B8301 /* Rust */,
@@ -154,13 +245,26 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		E57C1EC024BDEC540074CE11 /* AppMover.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppMover.framework;
+			remoteRef = E57C1EBF24BDEC540074CE11 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		E5A67354240C758D002B8301 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E57C1ECD24BF58FD0074CE11 /* Installation.storyboard in Resources */,
 				E5A6735E240C7590002B8301 /* Assets.xcassets in Resources */,
+				E57C1EAA24BDE2430074CE11 /* rustup in Resources */,
 				E55CD25B243A769700FC5252 /* NewProjects.storyboard in Resources */,
+				E57C1ECB24BF56CD0074CE11 /* Preferences.storyboard in Resources */,
 				E5A67361240C7590002B8301 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +283,7 @@
 				E53069DE241540F600809ADD /* LaunchWindow.swift in Sources */,
 				E5788916241693CF00633D12 /* Rustup.swift in Sources */,
 				E58A1A35240D592000367963 /* ToolchainChannel.swift in Sources */,
+				E57C1EC924BEE8A90074CE11 /* Process.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +327,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -230,6 +336,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -282,6 +389,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -291,6 +399,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -314,7 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rust/Rust.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U6Z6284VJP;
@@ -335,7 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rust/Rust.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U6Z6284VJP;
