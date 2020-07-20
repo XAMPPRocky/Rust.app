@@ -1,11 +1,3 @@
-//
-//  TaskBar.swift
-//  Rust
-//
-//  Created by Erin Power on 05/04/2020.
-//  Copyright © 2020 Rust. All rights reserved.
-//
-
 import Cocoa
 import Toml
 import Alamofire

@@ -1,11 +1,3 @@
-//
-//  Process.swift
-//  Rust
-//
-//  Created by Erin Power on 15/07/2020.
-//  Copyright © 2020 Rust. All rights reserved.
-//
-
 import Foundation
 
 /// Queue of launched rustup processes.
