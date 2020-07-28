@@ -98,18 +98,42 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		E513112E24D033220040428D /* Rust */ = {
+			isa = PBXGroup;
+			children = (
+				E5788915241693CF00633D12 /* Rustup.swift */,
+				E58A1A34240D592000367963 /* ToolchainChannel.swift */,
+			);
+			path = Rust;
+			sourceTree = "<group>";
+		};
+		E513112F24D0333B0040428D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E513112A24CED5AC0040428D /* InstallationController.swift */,
+				E5730ECF24393B0800B1A10D /* TaskBar.swift */,
+				E513113024D033440040428D /* Launch */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E513113024D033440040428D /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				E57889132416935E00633D12 /* LaunchController.swift */,
+				E53069DD241540F600809ADD /* LaunchWindow.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 		E55CD2542439EE2B00FC5252 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				E5A67359240C758D002B8301 /* AppDelegate.swift */,
-				E57889132416935E00633D12 /* LaunchController.swift */,
-				E53069DD241540F600809ADD /* LaunchWindow.swift */,
-				E5788915241693CF00633D12 /* Rustup.swift */,
-				E5730ECF24393B0800B1A10D /* TaskBar.swift */,
-				E58A1A34240D592000367963 /* ToolchainChannel.swift */,
 				E56C9E3D243C038500B19471 /* SpotlightDocumentation.swift */,
 				E57C1EC824BEE8A90074CE11 /* Process.swift */,
-				E513112A24CED5AC0040428D /* InstallationController.swift */,
+				E513112F24D0333B0040428D /* Views */,
+				E513112E24D033220040428D /* Rust */,
 			);
 			path = Sources;
 			sourceTree = "<group>";

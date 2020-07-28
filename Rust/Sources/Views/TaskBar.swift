@@ -65,7 +65,6 @@ class TaskBar {
         let beta = ChannelMenuItem(channel: .beta, action: #selector(setToolchainBeta), target: self)
         let nightly = ChannelMenuItem(channel: .nightly, action: #selector(setToolchainNightly), target: self)
 
-        /*
         switch Rustup.channel() {
         case .stable:
             stable.state = .on
@@ -74,9 +73,8 @@ class TaskBar {
         case .nightly:
             nightly.state = .on
         }
-        */
         
-        // menu.addItem(NSMenuItem(title: "New Project...", action: nil, keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "New Project...", action: #selector(newProject), keyEquivalent: "n"))
         // menu.addItem(NSMenuItem(title: "Open Project...", action: nil, keyEquivalent: ""))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(createDocumentationMenu())
@@ -86,7 +84,7 @@ class TaskBar {
         menu.addItem(beta)
         menu.addItem(nightly)
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(createMenuItem(title: "Preferences...", action: #selector(showPreferences), key: "p", target: self))
+        //menu.addItem(createMenuItem(title: "Preferences...", action: #selector(showPreferences), key: "p", target: self))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
@@ -165,5 +163,9 @@ class TaskBar {
         AppDelegate.preferencesWindow?.window?.orderFrontRegardless()
 
         AppDelegate.preferencesWindow!.showWindow(self)
+    }
+    
+    @objc func newProject() {
+        
     }
 }
