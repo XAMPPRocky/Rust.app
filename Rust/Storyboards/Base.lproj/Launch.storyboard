@@ -222,37 +222,6 @@
             </objects>
             <point key="canvasLocation" x="-239" y="-75"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="j7h-91-E9U">
-            <objects>
-                <viewController id="wau-Hh-mzQ" sceneMemberID="viewController">
-                    <view key="view" id="Naq-hO-QEp">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <button identifier="launchAtLoginCheckbox" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVT-hg-5jX">
-                                <rect key="frame" x="165" y="126" width="150" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Launch Rust at Login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="0gx-tQ-vu5">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button identifier="globalHotkeyCheckbox" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3wV-qw-YD8">
-                                <rect key="frame" x="165" y="146" width="158" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Enable Global Hotkeys" bezelStyle="regularSquare" imagePosition="left" inset="2" id="T30-zO-PQx">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                        </subviews>
-                    </view>
-                </viewController>
-                <customObject id="j3S-wA-FKH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="502" y="418"/>
-        </scene>
         <!--Launch Controller-->
         <scene sceneID="CME-I5-3QN">
             <objects>
