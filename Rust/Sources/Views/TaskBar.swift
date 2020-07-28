@@ -19,7 +19,7 @@ class TaskBar {
 
     // MARK: Logo
     func createLogo() {
-        let size = 22
+        let size = 21
         
         let logo = NSImage(named: NSImage.Name("status-logo"))!
         let logoInvert = NSImage(named: NSImage.Name("status-logo-inverted"))!
