@@ -1,11 +1,3 @@
-//
-//  AppMover.swift
-//  AppMover
-//
-//  Created by Oskar Groth on 2019-12-20.
-//  Copyright © 2019 Oskar Groth. All rights reserved.
-//
-
 import AppKit
 import Security
 

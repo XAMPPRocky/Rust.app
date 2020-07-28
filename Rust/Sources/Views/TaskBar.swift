@@ -74,8 +74,8 @@ class TaskBar {
             nightly.state = .on
         }
         
-        menu.addItem(NSMenuItem(title: "New Project...", action: #selector(newProject), keyEquivalent: "n"))
-        // menu.addItem(NSMenuItem(title: "Open Project...", action: nil, keyEquivalent: ""))
+        menu.addItem(createMenuItem(title: "New Project…", action: #selector(newProject), key: "n", target: self))
+        menu.addItem(createMenuItem(title: "Open Project…", action: #selector(openProject), key: "o", target: self))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(createDocumentationMenu())
         menu.addItem(NSMenuItem.separator())
@@ -84,7 +84,7 @@ class TaskBar {
         menu.addItem(beta)
         menu.addItem(nightly)
         menu.addItem(NSMenuItem.separator())
-        //menu.addItem(createMenuItem(title: "Preferences...", action: #selector(showPreferences), key: "p", target: self))
+        //menu.addItem(createMenuItem(title: "Preferences…", action: #selector(showPreferences), key: "p", target: self))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
@@ -154,7 +154,7 @@ class TaskBar {
             return
         }
         NSApp.activate(ignoringOtherApps: true)
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        let storyboard = NSStoryboard(name: "Launch", bundle: nil)
         AppDelegate.preferencesWindow = (storyboard.instantiateController(withIdentifier: "preferencesWindow") as! NSWindowController)
         AppDelegate.preferencesWindow?.window?.title = "Rust"
         AppDelegate.preferencesWindow?.window?.center()
@@ -166,6 +166,56 @@ class TaskBar {
     }
     
     @objc func newProject() {
+        let openPanel = NSOpenPanel()
+        openPanel.allowsMultipleSelection = false
+        openPanel.canChooseDirectories = true
+        openPanel.canCreateDirectories = true
+        openPanel.canChooseFiles = false
+
+        if openPanel.runModal() == .OK {
+            let url = openPanel.url!
+            try! Cargo.create(url)
+            
+            openUserEditor(url)
+        }
+    }
+    
+    @objc func openProject() {
+        let openPanel = NSOpenPanel()
+        openPanel.allowsMultipleSelection = false
+        openPanel.canChooseDirectories = true
+        openPanel.canCreateDirectories = true
+        openPanel.canChooseFiles = false
+
+        if openPanel.runModal() == .OK {
+            let url = openPanel.url!
+            openUserEditor(url)
+        }
+    }
+    
+    /// Opens
+    func openUserEditor(_ url: URL) {
+        let rustUrl = Bundle.main.url(forResource: "dummy", withExtension: "rs")!
         
+        if let appURL = NSWorkspace.shared.urlForApplication(toOpen: rustUrl) {
+            do {
+                try NSWorkspace.shared.open([url], withApplicationAt: appURL, options: .default, configuration: [:])
+            } catch _ {
+                NSWorkspace.shared.open(url)
+            }
+        } else {
+            NSWorkspace.shared.open(url)
+        }
+    }
+}
+
+extension FileManager {
+    func isDirectory(_ url:URL) -> Bool {
+        var isDir: ObjCBool = ObjCBool(false)
+        if fileExists(atPath: url.path, isDirectory: &isDir) {
+            return isDir.boolValue
+        } else {
+            return false
+        }
     }
 }

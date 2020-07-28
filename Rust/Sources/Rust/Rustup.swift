@@ -197,6 +197,10 @@ class Cargo {
 
         return (output as NSString).substring(with: match.range(at: 0))
     }
+    
+    static func create(_ url: URL) throws {
+        _ = try! syncOutput(["init", url.path])
+    }
 }
 
 // MARK: URL Location Functions
@@ -209,6 +213,12 @@ func rustcUrl() -> URL {
     return cargoHome()
         .appendingPathComponent("bin", isDirectory: true)
         .appendingPathComponent("rustc", isDirectory: false)
+}
+
+func cargoUrl() -> URL {
+    return cargoHome()
+        .appendingPathComponent("bin", isDirectory: true)
+        .appendingPathComponent("cargo", isDirectory: false)
 }
 
 func appDir() -> URL {

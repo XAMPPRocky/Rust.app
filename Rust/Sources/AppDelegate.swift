@@ -1,6 +1,5 @@
 import Cocoa
 import Toml
-import AppMover
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

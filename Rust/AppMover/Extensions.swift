@@ -1,11 +1,3 @@
-//
-//  Extensions.swift
-//  AppMover
-//
-//  Created by Oskar Groth on 2019-12-22.
-//  Copyright © 2019 Oskar Groth. All rights reserved.
-//
-
 import Cocoa
 import Foundation
 

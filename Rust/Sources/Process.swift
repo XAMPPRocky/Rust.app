@@ -1,8 +1,5 @@
 import Foundation
 
-/// Queue of launched rustup processes.
-fileprivate var PROCESS_QUEUE: [Int32: Process] = [:]
-
 fileprivate func launchProcess(tool: String? = "rustup", channel: ToolchainChannel?, args: [String], pipe: Pipe) -> Process {
     let process = Process()
     var args = args
@@ -21,6 +18,9 @@ fileprivate func launchProcess(tool: String? = "rustup", channel: ToolchainChann
     switch tool {
     case .some("rustc"):
         url =  rustcUrl()
+        break
+    case .some("cargo"):
+        url =  cargoUrl()
         break
     default:
         url = rustupUrl()
@@ -81,6 +81,7 @@ extension Process {
         try! process.run()
 
         let output = String(data: pipe.fileHandleForReading.readDataToEndOfFile(), encoding: .utf8)!
+        print(output)
         return output
     }
 }
