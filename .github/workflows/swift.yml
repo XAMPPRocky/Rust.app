@@ -16,4 +16,4 @@ jobs:
         project: Rust.xcodeproj
         scheme: Rust
         destination: platform=macOS
-        action: test
+        action: build
