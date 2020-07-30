@@ -2,10 +2,26 @@ import Cocoa
 import Toml
 import Alamofire
 
+fileprivate let RECENTLY_OPENED = "recently_opened"
+
 func createMenuItem(title: String, action: Selector?, key charCode: String, target: AnyObject?) -> NSMenuItem {
     let menu = NSMenuItem(title: title, action: action, keyEquivalent: charCode)
     menu.target = target
     return menu
+}
+
+class ProjectMenuItem: NSMenuItem {
+    var projectPath: URL!
+    
+    convenience init(url: URL) {
+        self.init(title: url.lastPathComponent, action: #selector(openProjectPath), keyEquivalent: "")
+        self.target = self
+        self.projectPath = url
+    }
+    
+    @objc func openProjectPath() {
+        openUserEditor(projectPath)
+    }
 }
 
 class TaskBar {
@@ -84,6 +100,8 @@ class TaskBar {
         
         menu.addItem(createMenuItem(title: "New Project…", action: #selector(newProject), key: "n", target: self))
         menu.addItem(createMenuItem(title: "Open Project…", action: #selector(openProject), key: "o", target: self))
+        menu.addItem(openProjectMenuItem())
+        
         menu.addItem(NSMenuItem.separator())
         menu.addItem(createDocumentationMenu())
         menu.addItem(NSMenuItem.separator())
@@ -97,6 +115,26 @@ class TaskBar {
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
         statusItem.menu = menu
+    }
+    
+    func openProjectMenuItem() -> NSMenuItem {
+        let openProjectItem = createMenuItem(title: "Open Recent", action: nil, key: "", target: self)
+        let items = UserDefaults.standard.array(forKey: RECENTLY_OPENED) as? [String] ?? []
+
+        if !items.isEmpty {
+            let menu = NSMenu()
+            
+            for path in items {
+                menu.addItem(ProjectMenuItem(url: URL(string: path)!))
+            }
+            
+            menu.addItem(NSMenuItem.separator())
+            menu.addItem(createMenuItem(title: "Clear Menu", action: #selector(clearCache), key: "", target: self))
+            
+            openProjectItem.submenu = menu
+        }
+        
+        return openProjectItem
     }
 
     // MARK: Documentation Menu
@@ -173,6 +211,11 @@ class TaskBar {
         AppDelegate.preferencesWindow!.showWindow(self)
     }
     
+    @objc func clearCache() {
+        UserDefaults.standard.removeObject(forKey: RECENTLY_OPENED)
+        createMainMenu()
+    }
+    
     @objc func newProject() {
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
@@ -185,9 +228,11 @@ class TaskBar {
             try! Cargo.create(url)
             
             openUserEditor(url)
+            
+            createMainMenu()
         }
     }
-    
+
     @objc func openProject() {
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
@@ -198,32 +243,34 @@ class TaskBar {
         if openPanel.runModal() == .OK {
             let url = openPanel.url!
             openUserEditor(url)
-        }
-    }
-    
-    /// Opens
-    func openUserEditor(_ url: URL) {
-        let rustUrl = Bundle.main.url(forResource: "dummy", withExtension: "rs")!
-        
-        if let appURL = NSWorkspace.shared.urlForApplication(toOpen: rustUrl) {
-            do {
-                try NSWorkspace.shared.open([url], withApplicationAt: appURL, options: .default, configuration: [:])
-            } catch _ {
-                NSWorkspace.shared.open(url)
-            }
-        } else {
-            NSWorkspace.shared.open(url)
+            createMainMenu()
         }
     }
 }
 
-extension FileManager {
-    func isDirectory(_ url:URL) -> Bool {
-        var isDir: ObjCBool = ObjCBool(false)
-        if fileExists(atPath: url.path, isDirectory: &isDir) {
-            return isDir.boolValue
-        } else {
-            return false
+/// Opens
+func openUserEditor(_ url: URL) {
+    let rustUrl = Bundle.main.url(forResource: "dummy", withExtension: "rs")!
+    
+    if let appURL = NSWorkspace.shared.urlForApplication(toOpen: rustUrl) {
+        do {
+            try NSWorkspace.shared.open([url], withApplicationAt: appURL, options: .default, configuration: [:])
+            cacheItem(url)
+        } catch _ {
+            NSWorkspace.shared.open(url)
+            cacheItem(url)
         }
+    } else {
+        NSWorkspace.shared.open(url)
+        cacheItem(url)
+    }
+}
+
+func cacheItem(_ url: URL) {
+    var items = UserDefaults.standard.array(forKey: RECENTLY_OPENED) as? [String] ?? []
+    
+    if !items.contains(url.absoluteString) {
+        items.insert(url.absoluteString, at: 0)
+        UserDefaults.standard.set(Array(items.prefix(10)), forKey: RECENTLY_OPENED)
     }
 }
