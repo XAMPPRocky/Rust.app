@@ -17,7 +17,7 @@ class InstallationController: NSViewController {
         if self.installButton.title == "Cancel" {
             quit(sender)
         } else if installButton.title == "Done" {
-            NSApplication.
+            done(sender)
         }
         
         self.installOutput.layoutManager?.allowsNonContiguousLayout = false
@@ -57,5 +57,11 @@ class InstallationController: NSViewController {
     
     @IBAction func quit(_ sender: Any) {
         NSApplication.shared.terminate(self)
+    }
+    
+    @IBAction func done(_ sender: Any) {
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+        appDelegate.menu = TaskBar()
+        self.view.window?.close()
     }
 }
