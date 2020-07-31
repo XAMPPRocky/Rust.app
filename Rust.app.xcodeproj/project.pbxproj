@@ -12,6 +12,11 @@
 		E522480E24D1771100A353C7 /* Toml in Frameworks */ = {isa = PBXBuildFile; productRef = E522480D24D1771100A353C7 /* Toml */; };
 		E53069DE241540F600809ADD /* LaunchWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53069DD241540F600809ADD /* LaunchWindow.swift */; };
 		E55CD257243A5FB100FC5252 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E55CD256243A5FB100FC5252 /* Alamofire */; };
+		E566510A24D41A0900C693F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E566510924D41A0900C693F4 /* AppDelegate.swift */; };
+		E566510C24D41A0900C693F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E566510B24D41A0900C693F4 /* ContentView.swift */; };
+		E566510E24D41A0B00C693F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E566510D24D41A0B00C693F4 /* Assets.xcassets */; };
+		E566511124D41A0B00C693F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E566511024D41A0B00C693F4 /* Preview Assets.xcassets */; };
+		E566511424D41A0B00C693F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E566511224D41A0B00C693F4 /* Main.storyboard */; };
 		E56C9E3E243C038500B19471 /* SpotlightDocumentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C9E3D243C038500B19471 /* SpotlightDocumentation.swift */; };
 		E5730ED024393B0800B1A10D /* TaskBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5730ECF24393B0800B1A10D /* TaskBar.swift */; };
 		E57889142416935E00633D12 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57889132416935E00633D12 /* LaunchController.swift */; };
@@ -43,6 +48,14 @@
 		E522480A24D06C1900A353C7 /* dummy.rs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.rs; sourceTree = "<group>"; };
 		E522480F24D1782300A353C7 /* Rust.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rust.xctestplan; sourceTree = "<group>"; };
 		E53069DD241540F600809ADD /* LaunchWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchWindow.swift; sourceTree = "<group>"; };
+		E566510724D41A0900C693F4 /* LaunchRust.app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchRust.app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E566510924D41A0900C693F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E566510B24D41A0900C693F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E566510D24D41A0B00C693F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E566511024D41A0B00C693F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E566511324D41A0B00C693F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E566511524D41A0B00C693F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E566511624D41A0B00C693F4 /* LaunchRust_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaunchRust_app.entitlements; sourceTree = "<group>"; };
 		E56C9E3D243C038500B19471 /* SpotlightDocumentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightDocumentation.swift; sourceTree = "<group>"; };
 		E5730ECF24393B0800B1A10D /* TaskBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBar.swift; sourceTree = "<group>"; };
 		E57889132416935E00633D12 /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
@@ -62,6 +75,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E566510424D41A0900C693F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5A67353240C758D002B8301 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +144,28 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		E566510824D41A0900C693F4 /* LaunchRust.app */ = {
+			isa = PBXGroup;
+			children = (
+				E566510924D41A0900C693F4 /* AppDelegate.swift */,
+				E566510B24D41A0900C693F4 /* ContentView.swift */,
+				E566510D24D41A0B00C693F4 /* Assets.xcassets */,
+				E566511224D41A0B00C693F4 /* Main.storyboard */,
+				E566511524D41A0B00C693F4 /* Info.plist */,
+				E566511624D41A0B00C693F4 /* LaunchRust_app.entitlements */,
+				E566510F24D41A0B00C693F4 /* Preview Content */,
+			);
+			path = LaunchRust.app;
+			sourceTree = "<group>";
+		};
+		E566510F24D41A0B00C693F4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E566511024D41A0B00C693F4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		E56AB4C824D0654400F1F531 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				E522480F24D1782300A353C7 /* Rust.xctestplan */,
-				E5A67358240C758D002B8301 /* Rust */,
+				E5A67358240C758D002B8301 /* Rust.app */,
+				E566510824D41A0900C693F4 /* LaunchRust.app */,
 				E5A67357240C758D002B8301 /* Products */,
 				E58F8F0524BC8031003BCB2A /* Frameworks */,
 			);
@@ -163,11 +206,12 @@
 			isa = PBXGroup;
 			children = (
 				E5A67356240C758D002B8301 /* Rust.app.app */,
+				E566510724D41A0900C693F4 /* LaunchRust.app.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E5A67358240C758D002B8301 /* Rust */ = {
+		E5A67358240C758D002B8301 /* Rust.app */ = {
 			isa = PBXGroup;
 			children = (
 				E513112D24D032490040428D /* Storyboards */,
@@ -177,12 +221,29 @@
 				E5A67362240C7590002B8301 /* Info.plist */,
 				E5A67363240C7590002B8301 /* Rust.entitlements */,
 			);
-			path = Rust;
+			path = Rust.app;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E566510624D41A0900C693F4 /* LaunchRust.app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E566511724D41A0B00C693F4 /* Build configuration list for PBXNativeTarget "LaunchRust.app" */;
+			buildPhases = (
+				E566510324D41A0900C693F4 /* Sources */,
+				E566510424D41A0900C693F4 /* Frameworks */,
+				E566510524D41A0900C693F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LaunchRust.app;
+			productName = LaunchRust.app;
+			productReference = E566510724D41A0900C693F4 /* LaunchRust.app.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E5A67355240C758D002B8301 /* Rust.app */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5A67366240C7590002B8301 /* Build configuration list for PBXNativeTarget "Rust.app" */;
@@ -212,10 +273,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Rust;
 				TargetAttributes = {
+					E566510624D41A0900C693F4 = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					E5A67355240C758D002B8301 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -239,11 +303,22 @@
 			projectRoot = "";
 			targets = (
 				E5A67355240C758D002B8301 /* Rust.app */,
+				E566510624D41A0900C693F4 /* LaunchRust.app */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E566510524D41A0900C693F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E566511424D41A0B00C693F4 /* Main.storyboard in Resources */,
+				E566511124D41A0B00C693F4 /* Preview Assets.xcassets in Resources */,
+				E566510E24D41A0B00C693F4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5A67354240C758D002B8301 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +334,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E566510324D41A0900C693F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E566510C24D41A0900C693F4 /* ContentView.swift in Sources */,
+				E566510A24D41A0900C693F4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5A67352240C758D002B8301 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +362,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		E566511224D41A0B00C693F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E566511324D41A0B00C693F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		E5A6735F240C7590002B8301 /* Launch.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,6 +381,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E566511824D41A0B00C693F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LaunchRust.app/LaunchRust_app.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"LaunchRust.app/Preview Content\"";
+				DEVELOPMENT_TEAM = U6Z6284VJP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LaunchRust.app/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "xampprocky.LaunchRust-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E566511924D41A0B00C693F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LaunchRust.app/LaunchRust_app.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"LaunchRust.app/Preview Content\"";
+				DEVELOPMENT_TEAM = U6Z6284VJP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LaunchRust.app/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "xampprocky.LaunchRust-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		E5A67364240C7590002B8301 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -451,6 +591,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E566511724D41A0B00C693F4 /* Build configuration list for PBXNativeTarget "LaunchRust.app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E566511824D41A0B00C693F4 /* Debug */,
+				E566511924D41A0B00C693F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E5A67351240C758D002B8301 /* Build configuration list for PBXProject "Rust.app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
