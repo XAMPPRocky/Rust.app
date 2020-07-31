@@ -1,61 +1,61 @@
 {
   "images" : [
     {
-      "filename" : "rust-alt@16.png",
+      "filename" : "ferris@16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "rust-alt@32.png",
+      "filename" : "ferris@32.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "rust-alt@32-1.png",
+      "filename" : "ferris@32-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "rust-alt@64.png",
+      "filename" : "ferris@64.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "rust-alt@128.png",
+      "filename" : "ferris@128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "rust-alt@256.png",
+      "filename" : "ferris@256.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
-      "filename" : "rust-alt@256-1.png",
+      "filename" : "ferris@256-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "rust-alt@512.png",
+      "filename" : "ferris@512.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "rust-alt@512-1.png",
+      "filename" : "ferris@512-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "rust-alt@1024.png",
+      "filename" : "ferris@1024.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
