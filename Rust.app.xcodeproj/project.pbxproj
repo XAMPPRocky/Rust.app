@@ -13,8 +13,6 @@
 		E53069DE241540F600809ADD /* LaunchWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53069DD241540F600809ADD /* LaunchWindow.swift */; };
 		E55CD257243A5FB100FC5252 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E55CD256243A5FB100FC5252 /* Alamofire */; };
 		E566510A24D41A0900C693F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E566510924D41A0900C693F4 /* AppDelegate.swift */; };
-		E566510C24D41A0900C693F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E566510B24D41A0900C693F4 /* ContentView.swift */; };
-		E566510E24D41A0B00C693F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E566510D24D41A0B00C693F4 /* Assets.xcassets */; };
 		E566511124D41A0B00C693F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E566511024D41A0B00C693F4 /* Preview Assets.xcassets */; };
 		E566511424D41A0B00C693F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E566511224D41A0B00C693F4 /* Main.storyboard */; };
 		E56C9E3E243C038500B19471 /* SpotlightDocumentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C9E3D243C038500B19471 /* SpotlightDocumentation.swift */; };
@@ -50,8 +48,6 @@
 		E53069DD241540F600809ADD /* LaunchWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchWindow.swift; sourceTree = "<group>"; };
 		E566510724D41A0900C693F4 /* LaunchRust.app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchRust.app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E566510924D41A0900C693F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E566510B24D41A0900C693F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E566510D24D41A0B00C693F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E566511024D41A0B00C693F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E566511324D41A0B00C693F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E566511524D41A0B00C693F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,8 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				E566510924D41A0900C693F4 /* AppDelegate.swift */,
-				E566510B24D41A0900C693F4 /* ContentView.swift */,
-				E566510D24D41A0B00C693F4 /* Assets.xcassets */,
 				E566511224D41A0B00C693F4 /* Main.storyboard */,
 				E566511524D41A0B00C693F4 /* Info.plist */,
 				E566511624D41A0B00C693F4 /* LaunchRust_app.entitlements */,
@@ -315,7 +309,6 @@
 			files = (
 				E566511424D41A0B00C693F4 /* Main.storyboard in Resources */,
 				E566511124D41A0B00C693F4 /* Preview Assets.xcassets in Resources */,
-				E566510E24D41A0B00C693F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +331,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E566510C24D41A0900C693F4 /* ContentView.swift in Sources */,
 				E566510A24D41A0900C693F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

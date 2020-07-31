@@ -27,7 +27,7 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>Erin Power 2020 all rights reserved</string>
+	<string>Copyright © 2020 Erin Power. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
 	<string>Launch</string>
 	<key>NSPrincipalClass</key>
