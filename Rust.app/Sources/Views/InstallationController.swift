@@ -14,8 +14,10 @@ class InstallationController: NSViewController {
     }
     
     @IBAction func installRustup(_ sender: Any) {
-        if self.installButton.title != "Install" {
+        if self.installButton.title == "Cancel" {
             quit(sender)
+        } else if installButton.title == "Done" {
+            NSApplication.
         }
         
         self.installOutput.layoutManager?.allowsNonContiguousLayout = false

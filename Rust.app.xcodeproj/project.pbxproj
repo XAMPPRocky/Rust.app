@@ -71,7 +71,7 @@
 		E5A6735D240C7590002B8301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5A67360240C7590002B8301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		E5A67362240C7590002B8301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5A67363240C7590002B8301 /* Rust.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rust.entitlements; sourceTree = "<group>"; };
+		E5A67363240C7590002B8301 /* Rust.app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rust.app.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,7 +219,7 @@
 				E5A6735D240C7590002B8301 /* Assets.xcassets */,
 				E56AB4C824D0654400F1F531 /* Resources */,
 				E5A67362240C7590002B8301 /* Info.plist */,
-				E5A67363240C7590002B8301 /* Rust.entitlements */,
+				E5A67363240C7590002B8301 /* Rust.app.entitlements */,
 			);
 			path = Rust.app;
 			sourceTree = "<group>";
@@ -550,13 +550,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Rust/Rust.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Rust.app/Rust.app.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U6Z6284VJP;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Rust/Info.plist;
+				INFOPLIST_FILE = Rust.app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -571,13 +571,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Rust/Rust.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Rust.app/Rust.app.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U6Z6284VJP;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Rust/Info.plist;
+				INFOPLIST_FILE = Rust.app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

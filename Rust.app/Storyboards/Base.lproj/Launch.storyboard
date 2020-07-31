@@ -194,7 +194,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Rust" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Rust_app" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +203,7 @@
         <!--Window Controller-->
         <scene sceneID="OAv-ZW-xUK">
             <objects>
-                <windowController storyboardIdentifier="preferencesWindow" id="yhU-lZ-f5n" customClass="LaunchWindow" customModule="Rust" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="preferencesWindow" id="yhU-lZ-f5n" customClass="LaunchWindow" customModule="Rust_app" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="EKZ-qQ-8fW">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
                         <rect key="contentRect" x="245" y="310" width="800" height="450"/>
@@ -225,7 +225,7 @@
         <!--Launch Controller-->
         <scene sceneID="CME-I5-3QN">
             <objects>
-                <viewController id="xPS-R7-bRZ" customClass="LaunchController" customModule="Rust" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xPS-R7-bRZ" customClass="LaunchController" customModule="Rust_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="NwX-ao-Nf6">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,7 +240,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="yEe-gv-dul">
-                                                    <rect key="frame" x="0.0" y="223" width="606" height="234"/>
+                                                    <rect key="frame" x="0.0" y="214" width="606" height="234"/>
                                                     <subviews>
                                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pk9-e0-zrq">
                                                             <rect key="frame" x="239" y="98" width="128" height="128"/>
@@ -287,10 +287,10 @@
                                                     </constraints>
                                                 </customView>
                                                 <stackView distribution="equalSpacing" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKx-GO-fIs">
-                                                    <rect key="frame" x="151" y="8" width="455" height="207"/>
+                                                    <rect key="frame" x="151" y="8" width="455" height="198"/>
                                                     <subviews>
                                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="GRa-cN-RfR">
-                                                            <rect key="frame" x="0.0" y="143" width="455" height="64"/>
+                                                            <rect key="frame" x="0.0" y="134" width="455" height="64"/>
                                                             <subviews>
                                                                 <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAa-84-wIj">
                                                                     <rect key="frame" x="60" y="8" width="383" height="48"/>
@@ -346,13 +346,13 @@
                                                             </constraints>
                                                         </customView>
                                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="hxC-yO-f5z">
-                                                            <rect key="frame" x="0.0" y="71" width="455" height="64"/>
+                                                            <rect key="frame" x="0.0" y="72" width="455" height="54"/>
                                                             <subviews>
                                                                 <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XXp-Vo-1jA">
-                                                                    <rect key="frame" x="60" y="8" width="383" height="48"/>
+                                                                    <rect key="frame" x="60" y="8" width="383" height="38"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="S1n-qx-cLB">
-                                                                            <rect key="frame" x="-2" y="24" width="196" height="24"/>
+                                                                            <rect key="frame" x="-2" y="19" width="196" height="19"/>
                                                                             <textFieldCell key="cell" selectable="YES" title="Create a new Rust project" id="dvA-eD-fPr">
                                                                                 <font key="font" metaFont="systemMedium" size="16"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -360,7 +360,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="YA9-h0-hWy">
-                                                                            <rect key="frame" x="-2" y="0.0" width="172" height="24"/>
+                                                                            <rect key="frame" x="-2" y="0.0" width="172" height="19"/>
                                                                             <textFieldCell key="cell" selectable="YES" title="Create a new a Rust project" id="tli-9i-Uof">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -381,7 +381,7 @@
                                                                     </customSpacing>
                                                                 </stackView>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5fN-Ql-kXV">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="5fN-Ql-kXV" secondAttribute="height" multiplier="1:1" id="LnB-z2-SUz"/>
                                                                         <constraint firstAttribute="width" constant="64" id="aSR-DD-Tst"/>
@@ -402,20 +402,20 @@
                                                             </constraints>
                                                         </customView>
                                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="rco-c1-txu">
-                                                            <rect key="frame" x="0.0" y="0.0" width="455" height="63"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="455" height="64"/>
                                                             <subviews>
                                                                 <stackView distribution="equalSpacing" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIW-s9-nD2">
-                                                                    <rect key="frame" x="60" y="8" width="383" height="47"/>
+                                                                    <rect key="frame" x="60" y="8" width="383" height="48"/>
                                                                     <subviews>
-                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-NG-NJI">
-                                                                            <rect key="frame" x="-2" y="28" width="387" height="19"/>
+                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-NG-NJI">
+                                                                            <rect key="frame" x="-2" y="28" width="387" height="20"/>
                                                                             <textFieldCell key="cell" selectable="YES" title="Clone an existing project" id="Xf0-d8-mIk">
                                                                                 <font key="font" metaFont="systemMedium" size="16"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="lvP-Kg-UOE">
+                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lvP-Kg-UOE">
                                                                             <rect key="frame" x="-2" y="4" width="387" height="16"/>
                                                                             <textFieldCell key="cell" selectable="YES" title="Get started on your project using an existing git repository." id="i2k-aV-FHV">
                                                                                 <font key="font" metaFont="system"/>
@@ -443,7 +443,7 @@
                                                                     </customSpacing>
                                                                 </stackView>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TIj-SB-MIj">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="64" id="aB0-hf-lXu"/>
                                                                         <constraint firstAttribute="width" secondItem="TIj-SB-MIj" secondAttribute="height" multiplier="1:1" id="bOU-5s-Jla"/>
@@ -552,6 +552,6 @@
         <image name="NSCaution" width="32" height="32"/>
         <image name="NSFolder" width="32" height="32"/>
         <image name="NSNetwork" width="32" height="32"/>
-        <image name="status-logo" width="512" height="512"/>
+        <image name="status-logo" width="540" height="540"/>
     </resources>
 </document>

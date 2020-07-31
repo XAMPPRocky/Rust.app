@@ -48,7 +48,7 @@
                                 <rect key="frame" x="82" y="311" width="391" height="56"/>
                                 <textFieldCell key="cell" alignment="justified" id="fY1-rD-7An">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">Welcome to Rust.app! It seems you don't have any existing Rust.app installation. You can configure what you want or proceed with the default, and the latest version of Rust.app will be installed.</string>
+                                    <string key="title">Welcome to Rust.app! It seems you don't have any existing Rust installation. You can configure what you want or proceed with the default, and the latest version of Rust will be installed.</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -95,8 +95,15 @@
                                                 </customSpacing>
                                             </stackView>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-wS-H6K">
-                                                <rect key="frame" x="-2" y="-2" width="260" height="18"/>
-                                                <buttonCell key="cell" type="check" title="Add Rust.app to your path environment" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ACm-WL-0Ez">
+                                                <rect key="frame" x="-2" y="116" width="178" height="18"/>
+                                                <buttonCell key="cell" type="check" title="Add Rust &amp; Tools to PATH" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ACm-WL-0Ez">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mE4-jT-yIt" userLabel="LoginItems Checkbox">
+                                                <rect key="frame" x="-2" y="-2" width="176" height="18"/>
+                                                <buttonCell key="cell" type="check" title="Launch Rust.app at Login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="3Bc-4W-Dk6">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -105,8 +112,10 @@
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
