@@ -1,4 +1,5 @@
 import Cocoa
+import ServiceManagement
 
 class InstallationController: NSViewController {
     @IBOutlet weak var profileButton: NSPopUpButton!
@@ -7,6 +8,7 @@ class InstallationController: NSViewController {
     @IBOutlet weak var installScrollView: NSScrollView!
     @IBOutlet weak var installOptionStackView: NSStackView!
     @IBOutlet weak var installButton: NSButton!
+    @IBOutlet weak var loginItemsCheckbox: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,10 @@ class InstallationController: NSViewController {
             
             installOptionStackView.isHidden = true
             installScrollView.isHidden = false
+        }
+        
+        if loginItemsCheckbox.isEnabled {
+            SMLoginItemSetEnabled(LAUNCHER_APP_ID as CFString, true)
         }
         
         try! Rustup.initialise(profile: profile, noModifyPath: noModifyPath) {

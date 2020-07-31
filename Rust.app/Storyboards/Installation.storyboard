@@ -221,6 +221,7 @@ DQ
                         <outlet property="installOptionStackView" destination="g8A-Ra-p2w" id="lRs-7H-Es4"/>
                         <outlet property="installOutput" destination="Z6v-D0-0gz" id="nLX-Bb-MeF"/>
                         <outlet property="installScrollView" destination="o3a-N6-yLx" id="y3m-gt-sEG"/>
+                        <outlet property="loginItemsCheckbox" destination="mE4-jT-yIt" id="a7D-xX-RAp"/>
                         <outlet property="profileButton" destination="Bbn-oL-Gtc" id="Uyg-KL-nGO"/>
                     </connections>
                 </viewController>

@@ -26,7 +26,49 @@
 		E5A6735A240C758D002B8301 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A67359240C758D002B8301 /* AppDelegate.swift */; };
 		E5A6735E240C7590002B8301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A6735D240C7590002B8301 /* Assets.xcassets */; };
 		E5A67361240C7590002B8301 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A6735F240C7590002B8301 /* Launch.storyboard */; };
+		E5F11B8D24D4388F0054A613 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F11B8C24D4388F0054A613 /* ServiceManagement.framework */; };
+		E5F11B8E24D4389E0054A613 /* LaunchRust.app.app in Resources */ = {isa = PBXBuildFile; fileRef = E566510724D41A0900C693F4 /* LaunchRust.app.app */; };
+		E5F11B9424D438B20054A613 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F11B9324D438B20054A613 /* Cocoa.framework */; };
+		E5F11B9C24D439670054A613 /* LaunchRust.app.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = E566510724D41A0900C693F4 /* LaunchRust.app.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5F11B8F24D4389E0054A613 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5A6734E240C758D002B8301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E566510624D41A0900C693F4;
+			remoteInfo = LaunchRust.app;
+		};
+		E5F11B9124D438A50054A613 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5A6734E240C758D002B8301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E566510624D41A0900C693F4;
+			remoteInfo = LaunchRust.app;
+		};
+		E5F11B9524D438B70054A613 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5A6734E240C758D002B8301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E566510624D41A0900C693F4;
+			remoteInfo = LaunchRust.app;
+		};
+		E5F11B9724D438C20054A613 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5A6734E240C758D002B8301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E566510624D41A0900C693F4;
+			remoteInfo = LaunchRust.app;
+		};
+		E5F11B9924D438C50054A613 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5A6734E240C758D002B8301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E566510624D41A0900C693F4;
+			remoteInfo = LaunchRust.app;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E57C1EB324BDE8D00074CE11 /* Embed Frameworks */ = {
@@ -37,6 +79,16 @@
 			files = (
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5F11B9B24D439550054A613 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				E5F11B9C24D439670054A613 /* LaunchRust.app.app in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -68,6 +120,8 @@
 		E5A67360240C7590002B8301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		E5A67362240C7590002B8301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5A67363240C7590002B8301 /* Rust.app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rust.app.entitlements; sourceTree = "<group>"; };
+		E5F11B8C24D4388F0054A613 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		E5F11B9324D438B20054A613 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F11B9424D438B20054A613 /* Cocoa.framework in Frameworks */,
+				E5F11B8D24D4388F0054A613 /* ServiceManagement.framework in Frameworks */,
 				E522480E24D1771100A353C7 /* Toml in Frameworks */,
 				E55CD257243A5FB100FC5252 /* Alamofire in Frameworks */,
 			);
@@ -181,6 +237,8 @@
 		E58F8F0524BC8031003BCB2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5F11B9324D438B20054A613 /* Cocoa.framework */,
+				E5F11B8C24D4388F0054A613 /* ServiceManagement.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -246,10 +304,16 @@
 				E5A67353240C758D002B8301 /* Frameworks */,
 				E5A67354240C758D002B8301 /* Resources */,
 				E57C1EB324BDE8D00074CE11 /* Embed Frameworks */,
+				E5F11B9B24D439550054A613 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E5F11B9024D4389E0054A613 /* PBXTargetDependency */,
+				E5F11B9224D438A50054A613 /* PBXTargetDependency */,
+				E5F11B9624D438B70054A613 /* PBXTargetDependency */,
+				E5F11B9824D438C20054A613 /* PBXTargetDependency */,
+				E5F11B9A24D438C50054A613 /* PBXTargetDependency */,
 			);
 			name = Rust.app;
 			packageProductDependencies = (
@@ -321,6 +385,7 @@
 				E57C1EAA24BDE2430074CE11 /* rustup in Resources */,
 				E522480B24D06C1900A353C7 /* dummy.rs in Resources */,
 				E5A67361240C7590002B8301 /* Launch.storyboard in Resources */,
+				E5F11B8E24D4389E0054A613 /* LaunchRust.app.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +418,34 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E5F11B9024D4389E0054A613 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E566510624D41A0900C693F4 /* LaunchRust.app */;
+			targetProxy = E5F11B8F24D4389E0054A613 /* PBXContainerItemProxy */;
+		};
+		E5F11B9224D438A50054A613 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E566510624D41A0900C693F4 /* LaunchRust.app */;
+			targetProxy = E5F11B9124D438A50054A613 /* PBXContainerItemProxy */;
+		};
+		E5F11B9624D438B70054A613 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E566510624D41A0900C693F4 /* LaunchRust.app */;
+			targetProxy = E5F11B9524D438B70054A613 /* PBXContainerItemProxy */;
+		};
+		E5F11B9824D438C20054A613 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E566510624D41A0900C693F4 /* LaunchRust.app */;
+			targetProxy = E5F11B9724D438C20054A613 /* PBXContainerItemProxy */;
+		};
+		E5F11B9A24D438C50054A613 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E566510624D41A0900C693F4 /* LaunchRust.app */;
+			targetProxy = E5F11B9924D438C50054A613 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		E566511224D41A0B00C693F4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -379,6 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LaunchRust.app/LaunchRust_app.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"LaunchRust.app/Preview Content\"";
@@ -391,8 +485,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "xampprocky.LaunchRust-app";
+				PRODUCT_BUNDLE_IDENTIFIER = xampprocky.LaunchRust.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -403,6 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LaunchRust.app/LaunchRust_app.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"LaunchRust.app/Preview Content\"";
@@ -415,8 +511,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "xampprocky.LaunchRust-app";
+				PRODUCT_BUNDLE_IDENTIFIER = xampprocky.LaunchRust.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

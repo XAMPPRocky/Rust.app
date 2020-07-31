@@ -1,40 +1,42 @@
-//
-//  AppDelegate.swift
-//  LaunchRust.app
-//
-//  Created by Erin Power on 31/07/2020.
-//  Copyright © 2020 Rust. All rights reserved.
-//
-
 import Cocoa
-import SwiftUI
 
-@NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
-
-    var window: NSWindow!
-
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
-
-        // Create the window and set the content view.
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false)
-        window.isReleasedWhenClosed = false
-        window.center()
-        window.setFrameAutosaveName("Main Window")
-        window.contentView = NSHostingView(rootView: contentView)
-        window.makeKeyAndOrderFront(nil)
-    }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-
-
+extension Notification.Name {
+    static let killLauncher = Notification.Name("killLauncher")
 }
 
+@NSApplicationMain
+class AppDelegate: NSObject {
+
+    @objc func terminate() {
+        NSApp.terminate(nil)
+    }
+}
+
+extension AppDelegate: NSApplicationDelegate {
+
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+
+        let mainAppIdentifier = "xampprocky.Rust.app"
+        let runningApps = NSWorkspace.shared.runningApplications
+        let isRunning = !runningApps.filter { $0.bundleIdentifier == mainAppIdentifier }.isEmpty
+
+        if !isRunning {
+            DistributedNotificationCenter.default().addObserver(self, selector: #selector(self.terminate), name: .killLauncher, object: mainAppIdentifier)
+
+            let path = Bundle.main.bundlePath as NSString
+            var components = path.pathComponents
+            components.removeLast()
+            components.removeLast()
+            components.removeLast()
+            components.append("MacOS")
+            components.append("Rust.app") //main app name
+
+            let newPath = NSString.path(withComponents: components)
+
+            NSWorkspace.shared.launchApplication(newPath)
+        }
+        else {
+            self.terminate()
+        }
+    }
+}
