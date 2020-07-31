@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "rust-logo-3.pdf",
+      "filename" : "rust-alt-3.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "rust-logo-4.pdf",
+      "filename" : "rust-alt.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -23,12 +23,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "rust-white-1.pdf",
+      "filename" : "rust-alt-white.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "rust-logo-1.pdf",
+      "filename" : "rust-alt-4.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -39,7 +39,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "rust-logo.pdf",
+      "filename" : "rust-alt-1.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -50,12 +50,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "rust-white.pdf",
+      "filename" : "rust-alt-white-1.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "rust-logo-2.pdf",
+      "filename" : "rust-alt-5.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -66,7 +66,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "rust-logo-5.pdf",
+      "filename" : "rust-alt-2.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -77,7 +77,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "rust-white-2.pdf",
+      "filename" : "rust-alt-white-2.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }

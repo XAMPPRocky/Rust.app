@@ -12,7 +12,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         #endif
 
         if Rustup.isPresent() {
-            self.menu = TaskBar()
+            DispatchQueue.main.async {
+                self.menu = TaskBar()
+            }
         } else {
             if let window = AppDelegate.preferencesWindow {
                 window.showWindow(self)
