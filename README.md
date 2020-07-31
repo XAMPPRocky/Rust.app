@@ -4,12 +4,15 @@ experience for Rust as well as some handy developer utilities through its status
 
 ## Features
 
-- **Create/Open Cargo Projects** — The `New Project…`/`Open Project…` commands
-  will respect your macOS system app preference for opening Rust code.
-- **Documentation Menu** — Have you ever wanted to open the `std` documentation
-  only to be in a spotty connection and not be able to open the docs? Rust.app will
-  automatically detect when it can reach `doc.rust-lang.org` and open a local
-  version instead.
+- **Easy Installation** — Installing Rust now just as easy as any other macOS app.
+- **Companion Statusbar App** — A optional statusbar app that provides you
+  with extra developer utilities to help you with Rust.
+  - **Create/Open Cargo Projects** — The `New Project…`/`Open Project…` commands
+    will respect your macOS system app preference for opening Rust code.
+  - **Documentation Menu** — Have you ever wanted to open the `std` documentation
+    only to be in a spotty connection and not be able to open the docs? Rust.app will
+    automatically detect when it can reach `doc.rust-lang.org` and open a local
+    version instead.
 
 ## Screenshots
 
