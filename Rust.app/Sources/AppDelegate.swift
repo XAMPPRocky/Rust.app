@@ -1,7 +1,7 @@
 import Cocoa
 import Toml
 
-let LAUNCHER_APP_ID = "xampprocky.LaunchRust.app"
+let LAUNCHER_APP_ID = "xampprocky.LaunchRustacean.app"
 
 extension Notification.Name {
     static let killLauncher = Notification.Name("killLauncher")

@@ -16,7 +16,7 @@ extension AppDelegate: NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
 
-        let mainAppIdentifier = "xampprocky.Rust.app"
+        let mainAppIdentifier = "xampprocky.Rustacean.app"
         let runningApps = NSWorkspace.shared.runningApplications
         let isRunning = !runningApps.filter { $0.bundleIdentifier == mainAppIdentifier }.isEmpty
 
