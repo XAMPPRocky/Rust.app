@@ -1,5 +1,5 @@
-# Rust.app 🦀 🖥
-Rust.app is a **unofficial** statusbar app for Rust & macOS. It provides an easy installation
+# Rustacean.app 🦀 🖥
+Rustacean.app is a **unofficial** statusbar app for Rust & macOS. It provides an easy installation
 experience for Rust as well as some handy developer utilities through its statusbar menu.
 
 **Platform Support:** macOS 10.15+
